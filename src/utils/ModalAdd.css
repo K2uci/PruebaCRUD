@@ -1,0 +1,56 @@
+.modalAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modalAdd .contModalAdd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+
+.modalAdd .contModalAdd .contAllInputs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    font-weight: 900;
+}
+
+.modalAdd .contModalAdd .contAllInputs label {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalAdd .contModalAdd .contALlButts {
+    margin-top: 1rem;
+}
+
+.modalAdd .contModalAdd .contALlButts button {
+    background-color: transparent;
+    border: none;
+    transition-duration: .2s;
+}
+
+.modalAdd .contModalAdd .contALlButts button:hover {
+    transform: scale(1.4);
+}
+
+.modalAdd .contModalAdd .contALlButts button img {
+    height: 2rem;
+    width: 2rem;
+}

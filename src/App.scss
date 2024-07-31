@@ -1,0 +1,153 @@
+//Con esta porcion de codigo pretendo cumplir con los requsitos fucionales 6 y 7 propuestos en el proyecto evaulativo
+
+//Creamos los objetos 'color-map' y 'fonts' con el fin de reutilizar codigo y garantizar la escalabilidad
+//y edicion en futuras modificaciones
+
+$color-map:(
+  primary: #2d095c,
+  secondary: #7814fa,
+  text: #222
+);
+
+$fonts:(
+  main-header:1.3rem,
+  main-element:.9rem
+);
+
+@function get-color($color-name) {
+  @return  map-get($color-map, $color-name )
+};
+
+@function get-font($fontSize) {
+  @return  map-get($fonts, $fontSize )
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+:root {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  margin: 0;
+}
+
+.contAll {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: get-color(text);
+}
+
+header {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  background-color: get-color(primary);
+  border-radius:5px ;
+}
+
+header .header__contButs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .header__contButs .butDel {
+  display: flex;
+  align-items: center;
+  padding: .3rem .5rem;
+  color: white;
+  background-color: #21AD64;
+  border: .1rem solid #21AD64;
+  border-radius: .5rem;
+  transition-duration: .5s;
+}
+
+header .header__contButs .butDel:hover {
+  transform: scale(1.2);
+}
+
+header .header__contButs .butDel img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main .main__header {
+  position: sticky;
+  top: 0;
+  color: get-color(primary);
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4,1fr) auto;
+  padding: 1rem 9rem;
+  font-size: get-font(main-header);
+  font-weight: 600;
+}
+
+main .main__header input{
+  height: 1rem;
+  width: 1rem;
+  align-self: center;
+  justify-self: center;
+}
+
+main .main__element {
+  display: grid;
+  color: get-color(primary);
+  grid-template-columns: repeat(4,1fr) auto;
+  padding: .2rem 9rem;
+  margin: .5rem 0;
+  font-size: get-font(main-element);
+  font-weight: 600;
+}
+
+main .main__element input{
+  height: 1rem;
+  width: 1rem;
+  align-self: center;
+  justify-self: center;
+}
+main .main__element p{
+  margin: 0;
+}
+
+main .main__element .element__contButts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .main__element .element__contButts button  {
+  background-color: transparent;
+  border: none;
+  transition-duration: .3s;
+}
+
+main .main__element .element__contButts button:hover  {
+  transform: scale(2);
+}
+
+main .main__element .element__contButts img  {
+  width: 1rem;
+  height: 1rem;
+}
+
+footer {
+  display: flex;
+  height: 8vh;
+  padding: .2rem 5rem;
+}

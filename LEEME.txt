@@ -1,0 +1,96 @@
+Technical Requirements
+
+    1-> Show a list of students with the following information:
+            First Name
+            Last Name
+            Email
+            Age
+            Grade (1st, 2nd, 3rd, etc...)
+    2-> The user should be able to add a new student
+    3-> The user should be able to edit the an existing student record
+    4-> The user should be able to delete a student
+    5-> Before a student can be removed, a confirmation dialog should be displayed that asks the user if they really want to delete the student
+    6-> Create a mixin for rem font sizes, and apply it to all headings in correct scss partial.
+    7-> Create a sass map for defining colors. Use color map to make paragraph tags a color of your choosing.
+
+
+RESPUESTAS:
+
+    Respuesta 1: Direccion (./Server/src/utils/loadUsers.js)
+    
+    Respuesta 2: Direccion (
+        Trabajo en el Backend: './Server/src/utils/addUsers.js'
+        Trabajo en el Fronted: './src/utils/ModalAdd.jsx'
+        )
+
+    Respuesta 3: Direccion (
+        Trabajo en el Backend: './Server/src/utils/editUsers.js'
+        Trabajo en el Fronted: './src/utils/ModalEdit.jsx'
+        )
+        !!IMPORTANTE!! 
+        1-> El email es la PK de cada usuario por eso no es recomendable editarla
+        2-> Si se deja algun dato vacio en la edicion este cuando se termine de editar tomara un valor NULL
+
+    Respuesta 4: Direccion (
+        Trabajo en el Backend: './Server/src/utils/delUsers.js'
+        Trabajo en el Fronted: './src/utils/ModalDel.jsx'
+        )
+
+    Respuesta 5: Quedo cumplida en las respuestas 2 , 3 y 4
+
+    Respuesta 6: Direccion (./src/App.scss)
+
+    Respuesta 7: Direccion (./src/App.scss)
+
+
+
+
+
+API Requirements
+
+    1-> Use Express
+    2-> CRUD for students
+    3-> MongoDB/MySQL/sqllite
+
+RESPUESTAS:
+
+    Respuesta 1: Direccion (
+        Node + Express: ./Server/src/app.js
+        )
+
+    Respuesta 2: Direccion (
+        C -> './Server/src/utils/addUsers.js'
+        R -> './Server/src/utils/loadUsers.js'
+        U -> './Server/src/utils/editUsers.js'
+        D -> './Server/src/utils/delUsers.js'
+        )
+    
+    Respuesta 3: Direccion(
+        Base de datos SQLITE3 -> './Server/src/database/students.db'
+        Coneccion a BD -> './Server/src/models/conection.js'
+    )
+
+
+UI Requirement 
+
+    1-> Use CSS Flexbox
+    2-> Use no styling libary
+    3-> Use React to build the UI
+    4-> Use Redux or Context API
+    5-> Use React Hooks
+
+RESPUESTAS:
+
+    Respuesta 1: !!TODO EL PROYECTO FUE ECHO CON FLEXBOX Y GRID!!
+
+    Respuesta 2: !!COMPLETADO!!
+    
+    Respuesta 3: !!COMPLETADO!!
+    
+    Respuesta 4: Seleccione Context API,es mas simple de controlar en aplicaciones pequenas (DOMINO AMBOS)
+                 Direccion(
+                    Creo el contexto: './src/Contexto.jsx'
+                    Consumo el contexto: './src/main.jsx'
+                 )
+            
+    Respuesta 5: !!TODO EL PROYECTO USA HOOKS!!

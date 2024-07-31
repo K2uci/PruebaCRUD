@@ -1,0 +1,52 @@
+.modalDel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modalDel .contModalDel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.modalDel .contModalDel p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.modalDel .contModalDel .contButts {
+    display: flex;
+    gap: 1rem;
+}
+
+.modalDel .contModalDel .contButts button {
+    padding: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    transition-duration: .2s;
+}
+
+.modalDel .contModalDel .contButts button:hover {
+    transform: scale(1.4);
+}
+
+.modalDel .contModalDel .contButts button img {
+    height: 2rem;
+    width: 2rem;
+}

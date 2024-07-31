@@ -1,0 +1,61 @@
+.modalEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modalEdit .contModalEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.modalEdit .contModalEdit .contAllInputs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    font-weight: 900;
+}
+
+.modalEdit .contModalEdit p {
+    text-align: center;
+    font-size: .8rem;
+    margin: 0;
+}
+
+.modalEdit .contModalEdit .contAllInputs label {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalEdit .contModalEdit .contALlButts {
+    margin-top: 1rem;
+}
+
+.modalEdit .contModalEdit .contALlButts button {
+    background-color: transparent;
+    border: none;
+    transition-duration: .2s;
+}
+
+.modalEdit .contModalEdit .contALlButts button:hover {
+    transform: scale(1.4);
+}
+
+.modalEdit .contModalEdit .contALlButts button img {
+    height: 2rem;
+    width: 2rem;
+}
